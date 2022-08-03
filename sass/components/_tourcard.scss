@@ -4,21 +4,22 @@
   width: 25%;
   position: relative;
   height: 50rem;
+  position: relative;
 
   &__side {
     height: 50rem;
     transition: 0.8s ease;
-    color: #fff;
+    // color: #fff;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     backface-visibility: hidden;
     border-radius: 3px;
+    overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 
     &--front {
-      background-color: orangered;
     }
     &--back {
       //   background-color: green;
@@ -57,8 +58,120 @@
 
   // font card
   &__picture {
+    height: 45%;
+    clip-path: polygon(0 0, 100% 0%, 100% 88%, 0% 100%);
+    background-blend-mode: screen;
+
     &--1 {
-      background-image: url();
+      background-image: linear-gradient(
+          to right bottom,
+          ($color-secondary, $color-secondary-light)
+        ),
+        url(/Natours-1/img/nat-5.jpg);
+      background-size: cover;
     }
+
+    &--2 {
+      background-image: linear-gradient(
+          to right bottom,
+          ($color-primary, $color-primary-dark)
+        ),
+        url(/Natours-1/img/nat-6.jpg);
+      background-size: cover;
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+          to right bottom,
+          ($color-tertiary, $color-tertiary-dark)
+        ),
+        url(/Natours-1/img/nat-7.jpg);
+      background-size: cover;
+    }
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: var(--color-white);
+    text-transform: uppercase;
+    position: absolute;
+    text-align: right;
+    top: 30%;
+    width: 75%;
+    right: 2%;
+
+    &-span {
+      padding: 0.3rem 1.5rem;
+      -webkit-box-decoratio-break: clone;
+      box-decoration-break: clone;
+      &--1 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($color-secondary-light, 0.85),
+          rgba($color-secondary, 0.85)
+        );
+      }
+
+      &--2 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($color-primary-light, 0.85),
+          rgba($color-primary-dark, 0.85)
+        );
+      }
+
+      &--3 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($color-tertiary, 0.85),
+          rgba($color-tertiary-dark, 0.85)
+        );
+      }
+    }
+  }
+
+  &__details {
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 3rem auto;
+    }
+
+    li {
+      text-align: center;
+      font-size: 1.5rem;
+      padding: 1rem;
+
+      &:not(:last-child) {
+        border-bottom: 1.5px solid #eee;
+      }
+    }
+  }
+
+  // backside styling
+
+  &__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+  }
+
+  &__price-box {
+    color: var(--color-white);
+    margin-bottom: 8rem;
+  }
+
+  &__price-only {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  &__price-value {
+    font-size: 6rem;
+    font-weight: 100;
   }
 }
