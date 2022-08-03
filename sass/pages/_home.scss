@@ -1,0 +1,40 @@
+// about section
+.section-about {
+  background-color: var(--color-grey-light-1);
+  //   height: 100vh;
+  margin-top: -20vh;
+  padding: 25rem 0;
+}
+
+.about-info {
+  width: 33.33%;
+}
+
+.about-img {
+  width: 33.33%;
+}
+
+// section features
+.section-features {
+  padding: 20rem 8rem;
+  background-image: linear-gradient(
+      to top right,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(/Natours-1/img/nat-4.jpg);
+  background-size: cover;
+  transform: skewY(-7deg);
+  margin-top: -10rem;
+
+  & > * {
+    transform: skewY(7deg);
+  }
+}
+
+// Section Tours
+.section-tours {
+  padding: 25rem 0;
+  background-color: var(--color-grey-light-1);
+  margin-top: -20vh;
+}

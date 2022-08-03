@@ -340,6 +340,9 @@ a {
 .tour-card:hover .tour-card__side--back {
   transform: rotateY(0deg);
 }
+.tour-card__picture--1 {
+  background-image: url();
+}
 
 .flex {
   display: flex;
