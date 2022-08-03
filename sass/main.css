@@ -209,6 +209,13 @@ a {
 .btn--white::after {
   background-color: var(--color-white);
 }
+.btn--green {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+.btn--green::after {
+  background-color: var(--color-primary);
+}
 .btn--animated {
   -webkit-animation: moveInDown 1s ease-out 0.75s;
           animation: moveInDown 1s ease-out 0.75s;
@@ -226,10 +233,6 @@ a {
   left: 0;
   z-index: -1;
   transition: all 0.4s;
-}
-.btn--green {
-  background-color: var(--color-primary);
-  color: var(--color-white);
 }
 
 .btn-text:link, .btn-text:visited {
